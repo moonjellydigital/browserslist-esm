@@ -69,8 +69,7 @@ You can check how config works at the playground: [`browsersl.ist`](https://brow
 * [JS API](#js-api)
 * [Environment Variables](#environment-variables)
 * [Cache](#cache)
-* [Security Contact](#security-contact)
-* [For Enterprise](#for-enterprise)
+* [Node Support](#node-support)
 
 ## Tools
 
@@ -695,3 +694,8 @@ environment variable.
 ## Browsers Data Updating
 
 See [`update-browserslist-db` docs](https://github.com/browserslist/update-db#readme)
+
+## Node Support
+
+Browserslist ESM only supports maintained versions of Node.js. View the
+[Node.js support table](https://nodejs.org/en/about/previous-releases).
