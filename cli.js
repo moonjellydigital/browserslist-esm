@@ -36,7 +36,7 @@ function error(msg) {
 if (isArg('--help') || isArg('-h')) {
   process.stdout.write(pkg.description + '.\n\n' + USAGE + '\n')
 } else if (isArg('--version') || isArg('-v')) {
-  process.stdout.write('browserslist ' + pkg.version + '\n')
+  process.stdout.write(pkg.name + ' ' + pkg.version + '\n')
 } else if (isArg('--update-db')) {
   /* c8 ignore next 8 */
   process.stdout.write(
