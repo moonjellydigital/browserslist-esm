@@ -1,10 +1,10 @@
-# Browserslist [![Cult Of Martians][cult-img]][cult]
+# Browserslist ESM
 
-<img width="120" height="120" alt="Browserslist logo by Anton Popov"
-     src="https://browsersl.ist/logo.svg" align="right">
+This is a fork of Browserslist, the config to share target browsers and Node.js
+versions between different front-end tools. The primary goal of this fork is to
+support ES modules.
 
-The config to share target browsers and Node.js versions between different
-front-end tools. It is used in:
+Browserslist is used in:
 
 * [Autoprefixer]
 * [Babel]
@@ -37,17 +37,11 @@ Developers set their version lists using queries like `last 2 versions`
 to be free from updating versions manually.
 Browserslist will use [`caniuse-lite`] with [Can I Use] data for this queries.
 
-You can check how config works at our playground: [`browsersl.ist`](https://browsersl.ist/)
+You can check how config works at the playground: [`browsersl.ist`](https://browsersl.ist/)
 
 <a href="https://browsersl.ist/">
   <img src="/img/screenshot.webp" alt="browsersl.ist website">
 </a>
-
-<br>
-<br>
-<div align="center">
-  <a href="https://evilmartians.com/?utm_source=browserslist"><img src="https://evilmartians.com/badges/sponsored-by-evil-martians.svg" alt="Sponsored by Evil Martians" width="236" height="54"></a>  <a href="https://cube.dev/?ref=eco-browserslist-github"><img src="https://user-images.githubusercontent.com/986756/154330861-d79ab8ec-aacb-4af8-9e17-1b28f1eccb01.svg" alt="Supported by Cube" width="227" height="46"></a>
-</div>
 
 [stylelint-no-unsupported-browser-features]: https://github.com/ismay/stylelint-no-unsupported-browser-features
 [obsolete-webpack-plugin]:                   https://github.com/ElemeFE/obsolete-webpack-plugin
@@ -77,15 +71,6 @@ You can check how config works at our playground: [`browsersl.ist`](https://brow
 * [Cache](#cache)
 * [Security Contact](#security-contact)
 * [For Enterprise](#for-enterprise)
-
-
-## Sponsors
-
-Browserslist needs your support. We are accepting donations
-[at Open Collective](https://opencollective.com/browserslist).
-
-<a href="https://www.springernature.com/"><img src="https://user-images.githubusercontent.com/19343/227742503-cf7fc2b3-9cc4-481c-97b8-68414d762fda.png" alt="Sponsored by Springer Nature Technology" width="154" height="54"></a>      <a href="https://workleap.com/"><img src="https://workleap.com/wp-content/uploads/2023/05/workleap-logo.svg" alt="Sponsored by Workleap" width="154" height="40"></a>
-
 
 ## Tools
 
@@ -706,26 +691,6 @@ browserslist.clearCaches()
 
 To disable the caching altogether, set the `BROWSERSLIST_DISABLE_CACHE`
 environment variable.
-
-
-## Security Contact
-
-To report a security vulnerability, please use the [Tidelift security contact].
-Tidelift will coordinate the fix and disclosure.
-
-[Tidelift security contact]: https://tidelift.com/security
-
-
-## For Enterprise
-
-Available as part of the Tidelift Subscription.
-
-The maintainers of `browserslist` and thousands of other packages are working
-with Tidelift to deliver commercial support and maintenance for the open source
-dependencies you use to build your applications. Save time, reduce risk,
-and improve code health, while paying the maintainers of the exact dependencies
-you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-browserslist?utm_source=npm-browserslist&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
-
 
 ## Browsers Data Updating
 

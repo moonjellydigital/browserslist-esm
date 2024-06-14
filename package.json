@@ -1,5 +1,5 @@
 {
-  "name": "browserslist",
+  "name": "browserslist-esm",
   "version": "4.23.1",
   "description": "Share target browsers between different front-end tools, like Autoprefixer, Stylelint and babel-env-preset",
   "keywords": [
@@ -7,23 +7,9 @@
     "browsers",
     "target"
   ],
-  "funding": [
-    {
-      "type": "opencollective",
-      "url": "https://opencollective.com/browserslist"
-    },
-    {
-      "type": "tidelift",
-      "url": "https://tidelift.com/funding/github/npm/browserslist"
-    },
-    {
-      "type": "github",
-      "url": "https://github.com/sponsors/ai"
-    }
-  ],
-  "author": "Andrey Sitnik <andrey@sitnik.ru>",
+  "author": "Camille Spain <camille@camillespain.com>",
   "license": "MIT",
-  "repository": "browserslist/browserslist",
+  "repository": "moonjellydigital/browserslist-esm",
   "scripts": {
     "unit": "NODE_ENV=test uvu test .test.js",
     "test:coverage": "c8 pnpm unit",
