@@ -23,7 +23,7 @@ jobs:
           node-version: 22
           cache: pnpm
       - name: Install dependencies
-        run: pnpm install --ignore-scripts
+        run: pnpm install --ignore-scripts --frozen-lockfile
       - name: Run tests
         run: pnpm test
   short:
@@ -47,6 +47,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: pnpm
       - name: Install dependencies
-        run: pnpm install --ignore-scripts
+        run: pnpm install --ignore-scripts --frozen-lockfile
       - name: Run unit tests
         run: pnpm unit
