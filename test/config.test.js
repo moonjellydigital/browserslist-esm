@@ -34,44 +34,41 @@ test.after.each(() => {
 })
 
 test('parses queries', () => {
-  equal(
-    browserslist.parseConfig('ie 10\n> 1%'),
-    { defaults: ['ie 10', '> 1%'] }
-  )
+  equal(browserslist.parseConfig('ie 10\n> 1%'), {
+    defaults: ['ie 10', '> 1%']
+  })
 })
 
 test('parses comma', () => {
-  equal(
-    browserslist.parseConfig('ie 10, > 1%'),
-    { defaults: ['ie 10', '> 1%'] }
-  )
+  equal(browserslist.parseConfig('ie 10, > 1%'), {
+    defaults: ['ie 10', '> 1%']
+  })
 })
 
 test('removes comments', () => {
   let config = '# support list\nie 10#bad\n> 1%'
-  equal(
-    browserslist.parseConfig(config),
-    { defaults: ['ie 10', '> 1%'] }
-  )
+  equal(browserslist.parseConfig(config), { defaults: ['ie 10', '> 1%'] })
 })
 
 test('supports sections', () => {
-  equal(
-    browserslist.parseConfig('ie 10\n[test]\nie 11'),
-    { defaults: ['ie 10'], test: ['ie 11'] }
-  )
+  equal(browserslist.parseConfig('ie 10\n[test]\nie 11'), {
+    defaults: ['ie 10'],
+    test: ['ie 11']
+  })
 })
 
 test('throws on duplicate sections', () => {
   let config = '[test]\nie 10\n[production test]\nie 11'
-  throws(() => { browserslist.parseConfig(config) }, /Duplicate section test in Browserslist config/)
+  throws(() => {
+    browserslist.parseConfig(config)
+  }, /Duplicate section test in Browserslist config/)
 })
 
 test('trims whitespaces', () => {
-  equal(
-    browserslist.parseConfig('ie 9\n\n [ test] \n \n  > 1%\n'),
-    { defaults: ['ie 9'], test: ['> 1%'] }
-  )
+  equal(browserslist.parseConfig('ie 9\n\n [ test] \n \n  > 1%\n'), {
+    defaults: ['ie 9'],
+    test: ['> 1%']
+  })
 })
 
 test('returns undefined on no config', () => {
@@ -96,24 +93,36 @@ test('shows warning on broken package.json', () => {
 })
 
 test('shows error on key typo', () => {
-  throws(() => { browserslist.findConfig(TYPO) }, /browserlist/)
+  throws(() => {
+    browserslist.findConfig(TYPO)
+  }, /browserlist/)
 })
 
 test('reads from dir wich contains both browserslist and package.json', () => {
-  throws(() => { browserslist.findConfig(BOTH1) }, /contains both browserslist and package\.json/)
+  throws(() => {
+    browserslist.findConfig(BOTH1)
+  }, /contains both browserslist and package\.json/)
 })
 
 test('reads from dir wich contains both .browserslistrc and package.json', () => {
-  throws(() => { browserslist.findConfig(BOTH2) }, /contains both .browserslistrc and package\.json/)
+  throws(() => {
+    browserslist.findConfig(BOTH2)
+  }, /contains both .browserslistrc and package\.json/)
 })
 
 test('reads from dir wich contains both .browserslistrc and browserslist', () => {
-  throws(() => { browserslist.findConfig(BOTH3) }, /contains both .browserslistrc and browserslist/)
+  throws(() => {
+    browserslist.findConfig(BOTH3)
+  }, /contains both .browserslistrc and browserslist/)
 })
 
 test('checks config format', () => {
-  throws(() => { browserslist.findConfig(WRONG1) }, /Browserslist config should/)
-  throws(() => { browserslist.findConfig(WRONG2) }, /Browserslist config should/)
+  throws(() => {
+    browserslist.findConfig(WRONG1)
+  }, /Browserslist config should/)
+  throws(() => {
+    browserslist.findConfig(WRONG2)
+  }, /Browserslist config should/)
 })
 
 test('reads config with one string', () => {

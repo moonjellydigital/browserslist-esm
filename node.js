@@ -203,10 +203,11 @@ module.exports = {
     if (!ctx.dangerousExtend && !process.env.BROWSERSLIST_DANGEROUS_EXTEND) {
       checkExtend(name)
     }
-    var stats = require(require.resolve(
-      path.join(name, 'browserslist-stats.json'),
-      { paths: ['.'] }
-    ))
+    var stats = require(
+      require.resolve(path.join(name, 'browserslist-stats.json'), {
+        paths: ['.']
+      })
+    )
     return normalizeStats(data, stats)
   },
 

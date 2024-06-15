@@ -1,5 +1,5 @@
 let { test } = require('uvu')
-let {  equal } = require('uvu/assert')
+let { equal } = require('uvu/assert')
 let { join } = require('path')
 
 delete require.cache[require.resolve('..')]
