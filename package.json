@@ -1,6 +1,6 @@
 {
   "name": "browserslist-esm",
-  "version": "4.23.1",
+  "version": "5.0.0-dev",
   "description": "Share target browsers between different front-end tools, like Autoprefixer, Stylelint and babel-env-preset",
   "keywords": [
     "caniuse",
