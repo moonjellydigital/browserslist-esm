@@ -20,11 +20,11 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "*.{js,mjs,cjs,json}": [
+    "*.{js,mjs,cjs}": [
       "prettier --write",
       "eslint --fix"
     ],
-    "*.{css,md}": [
+    "*.{css,md,json,yaml,yml}": [
       "prettier --write"
     ]
   },
